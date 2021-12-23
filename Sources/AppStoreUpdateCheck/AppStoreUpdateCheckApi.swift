@@ -41,7 +41,7 @@ public extension AppStoreUpdateCheckAPI {
                                   let appStoreUrl = (result["trackViewUrl"] as? String)?.components(separatedBy: "?").first
                             else {
                                 DispatchQueue.main.async {
-                                    success((nil, false, false, nil))
+                                    failure(NSError(domain: "no_such_app", code: 22, userInfo: [NSLocalizedDescriptionKey: "App not found on the app store."]))
                                 }
                                 return
                             }
