@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol AppStoreUpdateCheckAPI {
+public protocol AppStoreUpdateCheckAPI {
     
     func checkForUpdate(success: @escaping ((appVersion: String?, isUpdateAvailable: Bool, haveToForceUpdate: Bool, appStoreURL: String?)) -> (), failure: @escaping (Error) -> ())
     

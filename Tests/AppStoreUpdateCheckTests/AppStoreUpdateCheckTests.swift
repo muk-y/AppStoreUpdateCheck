@@ -31,9 +31,16 @@
             XCTAssertFalse(updateTuple.haveToForceUpdate)
         }
         
-        func test_with_major_version_change_returns_update_and_force_update_available() {
+        func test_with_sub_major_version_change_returns_update_and_force_update_available() {
             let updateChecker = AppStoreUpdateChecker()
             let updateTuple = updateChecker.checkUpdate(of: "1.0.11", with: "1.1")
+            XCTAssertTrue(updateTuple.updateAvailable)
+            XCTAssertTrue(updateTuple.haveToForceUpdate)
+        }
+        
+        func test_with_major_version_change_returns_update_and_force_update_available() {
+            let updateChecker = AppStoreUpdateChecker()
+            let updateTuple = updateChecker.checkUpdate(of: "2", with: "1.1.11")
             XCTAssertTrue(updateTuple.updateAvailable)
             XCTAssertTrue(updateTuple.haveToForceUpdate)
         }

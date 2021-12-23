@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AppStoreUpdateCheck",
+        "repositoryURL": "https://github.com/muk-y/AppStoreUpdateCheck.git",
+        "state": {
+          "branch": "dev",
+          "revision": "68ea8d6743fe8a673cc6d6614299b560242fe99e",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
