@@ -13,7 +13,7 @@ public protocol AppStoreUpdateCheckAPI {
     
 }
 
-extension AppStoreUpdateCheckAPI {
+public extension AppStoreUpdateCheckAPI {
     
     func checkForUpdate(success: @escaping ((appVersion: String?, isUpdateAvailable: Bool, haveToForceUpdate: Bool, appStoreURL: String?)) -> (), failure: @escaping (Error) -> ()) {
         if Reachability.isConnectedToNetwork {

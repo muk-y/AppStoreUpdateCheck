@@ -19,5 +19,5 @@ class ViewController: UIViewController {
 }
 
 //MARK: AppStoreUpdateCheckApi
-extension ViewController: AppStoreUpdateCheckApi { }
+extension ViewController: AppStoreUpdateCheckAPI {}
 
